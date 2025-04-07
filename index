@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Membresías</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .membership {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .membership:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .video {
+            margin: 10px;
+            width: 300px;
+            height: 200px;
+            background-color: #000;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido a Nuestro Sitio de Membresías</h1>
+    <p>Elige tu membresía y accede a contenido exclusivo.</p>
+</header>
+
+<div class="container">
+    <h2>Membresías Disponibles</h2>
+    <div class="membership">
+        <h3>Membresía Básica</h3>
+        <p>Acceso a videos básicos.</p>
+        <button>Suscribirse</button>
+    </div>
+    <div class="membership">
+        <h3>Membresía Premium</h3>
+        <p>Acceso a todos los videos y contenido exclusivo.</p>
+        <button>Suscribirse</button>
+    </div>
+</div>
+
+<div class="video-container">
+    <h2>Videos Disponibles</h2>
+    <div class="video">
+        <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video">
+        <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-2" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+</html>
