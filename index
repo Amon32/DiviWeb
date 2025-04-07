@@ -62,6 +62,32 @@
         button:hover {
             background-color: #218838;
         }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact-form {
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -83,17 +109,31 @@
         <p>Acceso a todos los videos y contenido exclusivo.</p>
         <button>Suscribirse</button>
     </div>
+
+    <h2>Videos Disponibles</h2>
+    <div class="video-container">
+        <div class="video">
+            <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-2" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
 </div>
 
-<div class="video-container">
-    <h2>Videos Disponibles</h2>
-    <div class="video">
-        <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-1" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-        <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-2" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
+<footer>
+    <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
