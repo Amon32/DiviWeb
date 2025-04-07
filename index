@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,32 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            animation: fadeIn 1s;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         header {
             background: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
+
         .membership {
             background: #fff;
             border: 1px solid #ddd;
@@ -32,16 +47,19 @@
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
         }
+
         .membership:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
+
         .video-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 20px;
         }
+
         .video {
             margin: 10px;
             width: 300px;
@@ -50,6 +68,7 @@
             border-radius: 5px;
             overflow: hidden;
         }
+
         button {
             background-color: #28a745;
             color: #fff;
@@ -59,9 +78,11 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         button:hover {
             background-color: #218838;
         }
+
         footer {
             background: #333;
             color: #fff;
@@ -71,69 +92,128 @@
             bottom: 0;
             width: 100%;
         }
-        .contact-form {
+
+        .contact-form,
+        .faq,
+        .testimonials {
             margin-top: 20px;
             background: #fff;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .contact-form input, .contact-form textarea {
+
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         .contact-form button {
             width: 100%;
         }
+
+        .faq h3 {
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .faq-content {
+            display: none;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .testimonial {
+            margin: 10px;
+            padding: 10px;
+            border-left: 4px solid #28a745;
+            background: #f9f9f9;
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Bienvenido a Nuestro Sitio de Membresías</h1>
-    <p>Elige tu membresía y accede a contenido exclusivo.</p>
-</header>
+    <header>
+        <h1>Bienvenido a Nuestro Sitio de Membresías</h1>
+        <p>Elige tu membresía y accede a contenido exclusivo.</p>
+    </header>
 
-<div class="container">
-    <h2>Membresías Disponibles</h2>
-    <div class="membership">
-        <h3>Membresía Básica</h3>
-        <p>Acceso a videos básicos.</p>
-        <button>Suscribirse</button>
-    </div>
-    <div class="membership">
-        <h3>Membresía Premium</h3>
-        <p>Acceso a todos los videos y contenido exclusivo.</p>
-        <button>Suscribirse</button>
-    </div>
-
-    <h2>Videos Disponibles</h2>
-    <div class="video-container">
-        <div class="video">
-            <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-1" frameborder="0" allowfullscreen></iframe>
+    <div class="container">
+        <h2>Membresías Disponibles</h2>
+        <div class="membership">
+            <h3>Membresía Básica</h3>
+            <p>Acceso a videos básicos.</p>
+            <button>Suscribirse</button>
         </div>
-        <div class="video">
-            <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-2" frameborder="0" allowfullscreen></iframe>
+        <div class="membership">
+            <h3>Membresía Premium</h3>
+            <p>Acceso a todos los videos y contenido exclusivo.</p>
+            <button>Suscribirse</button>
+        </div>
+
+        <h2>Videos Disponibles</h2>
+        <div class="video-container">
+            <div class="video">
+                <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-1" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe width="100%" height="100%" src="https://video.bunny.net/tu-video-2" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu email" required>
+                <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
+        <div class="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonial">
+                <p><strong>Juan Pérez:</strong> "Excelente contenido, ¡me encanta!"</p>
+            </div>
+            <div class="testimonial">
+                <p><strong>María López:</strong> "Las membresías valen cada centavo."</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <h3 onclick="toggleFAQ(this)">¿Qué incluye la Membresía Básica?</h3>
+            <div class="faq-content">
+                <p>La Membresía Básica incluye acceso a videos básicos y contenido limitado.</p>
+            </div>
+            <h3 onclick="toggleFAQ(this)">¿Puedo cancelar mi suscripción?</h3>
+            <div class="faq-content">
+                <p>Sí, puedes cancelar tu suscripción en cualquier momento desde tu perfil.</p>
+            </div>
         </div>
     </div>
 
-    <div class="contact-form">
-        <h2>Contacto</h2>
-        <form>
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu email" required>
-            <textarea rows="4" placeholder="Tu mensaje" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </div>
-</div>
+    <footer>
+        <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
-</footer>
+    <script>
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
 
 </body>
+
 </html>
